@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+### WordPress template
+/root/
+/wp-content/index.php
+/wp-content/plugins/
+/wp-content/themes/index.php
+/wp-content/themes/twentynineteen
+/wp-content/themes/twentyseventeen/
+/wp-content/themes/twentysixteen/
+
+
+
+### JetBrains template
+# User-specific stuff
+.idea/
