@@ -8,7 +8,7 @@
  - Webpack to build scss and javascript
  - Gulp to build final .zip file
  - The code is organized by components and pages
- - Uses the parent theme twenty fifteen
+ - Uses the parent theme twentynineteen
  - Reset some features of parent theme
  
 Some feature for this boilerplate just send a Pull request or a comment.
@@ -22,8 +22,9 @@ Some feature for this boilerplate just send a Pull request or a comment.
 
 ## Check the .env file to see the ports of applications
 
-# This is a example of .env file
-# Example
+### This is a example of .env file
+### Example
+```
 WEBPACK_DEV_SERVER_PORT=3000
 PHP_MY_ADMIN_PORT=8090
 WORDPRESS_PORT=8089
@@ -33,6 +34,7 @@ MY_SQL_ROOT_PASSWORD=password
 MY_SQL_DATABASE=wordpress
 MYSQL_USER=wordpress
 MYSQL_PASSWORD=wordpress
+```
 
 
 ## Login system
