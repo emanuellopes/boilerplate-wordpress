@@ -22,7 +22,7 @@ Some feature for this boilerplate just send a Pull request or a comment.
 
 ## Check the .env file to see the ports of applications
 
-### This is a example of .env file
+### This is an example of .env file
 ### Example
 ```
 WEBPACK_DEV_SERVER_PORT=3000
