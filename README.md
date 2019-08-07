@@ -19,10 +19,26 @@ Some feature for this boilerplate just send a Pull request or a comment.
 -  [PHP](http://php.net/)
 -  [DOCKER](https://docs.docker.com/)
 
+
+## Check the .env file to see the ports of applications
+
+# This is a example of .env file
+# Example
+WEBPACK_DEV_SERVER_PORT=3000
+PHP_MY_ADMIN_PORT=8090
+WORDPRESS_PORT=8089
+MYSQL_PORT=3306
+
+MY_SQL_ROOT_PASSWORD=password
+MY_SQL_DATABASE=wordpress
+MYSQL_USER=wordpress
+MYSQL_PASSWORD=wordpress
+
+
 ## Login system
 - phpMyAdmin
 ```
-http://localhost:8080
+http://localhost:8090
 User: root
 Password: password
 ```
@@ -35,6 +51,15 @@ Password: wordpress
 Database: wordpress
 ```
 
+- Webpack server
+```
+Port: 3000
+```
+
+- WordPress server
+```
+Port: 8089
+```
 
 ## Structure
 
