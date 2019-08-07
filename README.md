@@ -19,6 +19,11 @@ Some feature for this boilerplate just send a Pull request or a comment.
 -  [PHP](http://php.net/)
 -  [DOCKER](https://docs.docker.com/)
 
+# Install composer in bin folder
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+```
 
 ## Check the .env file to see the ports of applications
 
