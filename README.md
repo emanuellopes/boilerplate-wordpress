@@ -132,6 +132,18 @@ This project does't need an apache/mysql configuration, it can run it docker fil
   Execute command  `gulp dev`
 ```
 
+### WP-CLi
+
+ 1. Backup database to 'root' folder
+ ```
+    docker-compose run wp-cli wp db export backup.sql
+ ```
+ 
+ 2. Recover database from sql file
+ ```
+    docker-compose run wp-cli wp db import backup.sql
+ ```
+
 ### Gulp tasks
 
  ```
