@@ -5,6 +5,8 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+const postcssPresetEnv = require('postcss-preset-env');
+
 const dotenv = require('dotenv');
 
 let WEBPACK_DEV_SERVER_PORT;
@@ -65,6 +67,18 @@ module.exports = (env, argv) => {
                     use: [
                         MiniCssExtractPlugin.loader,
                         'css-loader',
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: !PROD,
+                                plugins: [
+                                    postcssPresetEnv({
+                                        autoprefixer: {
+                                            grid: false }
+                                    })
+                                ],
+                            }
+                        },
                         'resolve-url-loader?sourceMap',
                         'sass-loader?sourceMap'
                     ]
