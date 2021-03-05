@@ -1,0 +1,41 @@
+{
+  "name": "team-name/project",
+  "type": "wordpress-theme",
+  "description": "WordPress Sample theme",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "phpcs --standard=./phpcs.xml",
+    "lint-report": "phpcs --standard=./phpcs.xml --report=source",
+    "clean-vendor": "php vendor/emanuellopes/composer-vendor-cleaner/bin/clean",
+    "build-prod": "composer install  --no-ansi --no-dev --no-interaction --no-plugins --no-progress --no-scripts --no-suggest --optimize-autoloader && composer clean-vendor"
+  },
+  "authors": [
+    {
+      "name": "Emanuel Lopes",
+      "email": "emanuel.lopes@namecheap.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "App"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "require": {
+    "php": "7.4.*|8.*",
+    "ext-json": "*",
+    "emanuellopes/composer-vendor-cleaner": "dev-master"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+    "friendsofphp/php-cs-fixer": "^2.16",
+    "roave/security-advisories": "dev-master",
+    "rregeer/phpunit-coverage-check": "^0.3.1",
+    "sempro/phpunit-pretty-print": "1.2.0",
+    "squizlabs/php_codesniffer": "^3.5",
+    "wp-coding-standards/wpcs": "^2.3"
+  }
+}

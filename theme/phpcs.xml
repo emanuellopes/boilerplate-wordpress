@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress NC Lint">
+  <description>A custom set of rules to check for a WPized WordPress project</description>
+
+  <!-- Pass some flags to PHPCS:
+		 p flag: Show progress of the run.
+		 s flag: Show sniff codes in all reports.
+	-->
+  <arg value="ps"/>
+
+  <!-- Strip the filepaths down to the relevant bit. -->
+  <arg name="basepath" value="./"/>
+
+  <!-- Check up to 8 files simultanously. -->
+  <arg name="parallel" value="8"/>
+
+  <!-- Only check the PHP, CSS and SCSS files. JS files are checked separately with JSCS and JSHint. -->
+  <arg name="extensions" value="php"/>
+
+  <!-- Check all files in this directory and the directories below it. -->
+  <file>.</file>
+
+  <exclude-pattern>/vendor/*</exclude-pattern>
+  <exclude-pattern>/wordpress/*</exclude-pattern>
+  <exclude-pattern>/tests/*</exclude-pattern>
+  <exclude-pattern>/node_modules/*</exclude-pattern>
+  <exclude-pattern>/_dev/*</exclude-pattern>
+  <exclude-pattern>/src/*</exclude-pattern>
+  <exclude-pattern>*.twig</exclude-pattern>
+
+  <rule ref="WordPress">
+    <!--
+    We may want a middle ground though. The best way to do this is add the
+    entire ruleset, then rule by rule, remove ones that don't suit a project. We
+    can do this by running `phpcs` with the '-s' flag, to see the names of the
+    different Sniffs, as their rules are broken. From here, we can opt to
+    exclude problematic sniffs like so.
+    -->
+    <exclude name="Squiz.Commenting.FunctionComment"/>
+    <exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
+    <exclude name="WordPress.WP.I18n.NoEmptyStrings"/>
+    <exclude name="WordPress.Files.FileName"/>
+    <exclude name="WordPress.WhiteSpace.PrecisionAlignment.Found"/>
+    <exclude name="Squiz.Commenting"/>
+  </rule>
+</ruleset>
