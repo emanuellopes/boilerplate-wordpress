@@ -36,33 +36,33 @@ Password: wordpress
 Database: wordpress
 ```
 
-#Docker 
-##Start server
+# Docker 
+## Start server
 On root folder
 ```
 docker-compose up -d
 ```
-##Stop server
+## Stop server
 On root folder
 ```
 docker-compose down
 ```
 
-##rebuild docker
+## Rebuild docker
 ```
 docker-compose up -d --build
 ```
 
-##remove all docker files
+## Remove all docker files
 ```
 docker-composer down -v --rmi local
 ```
 
-#start working on theme
+# Start working on theme
 1. enter in the theme directory
 2. install composer dependencies -> composer install
 3. install nodejs dependencies -> npm i
 
-#How to compile js and css files
+# How to compile js and css files
 - npm run dev -> for development
 - npm run build -> for build prod files
