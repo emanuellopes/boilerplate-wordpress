@@ -1,18 +1,11 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### WordPress template
-/root/
-/wp-content/index.php
-/wp-content/plugins/
-/wp-content/themes/index.php
-/wp-content/themes/twentynineteen
-/wp-content/themes/twentyseventeen/
-/wp-content/themes/twentysixteen/
-/wp-content/themes/boilerplate-theme/node_modules
-/wp-content/themes/boilerplate-theme/main.js
-/wp-content/themes/boilerplate-theme/style.css
-/wp-content/themes/boilerplate-theme/package-lock.json
-
-
+/_dev/wordpress-root
+/theme/dist
+/theme/vendor
+/theme/composer.lock
+/theme/package-lock.json
+/theme/style.css
 
 
 ### JetBrains template
